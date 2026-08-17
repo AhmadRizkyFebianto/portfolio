@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #171717;
+  --color-primary-light: #262626;
+  --color-primary-dark: #0a0a0a;
+
+  --color-secondary: #f5f5f5;
+  --color-secondary-light: #ffffff;
+  --color-secondary-dark: #e5e5e5;
+
+  --color-text-primary: #171717;
+  --color-text-secondary: #525252;
+  --color-text-muted: #737373;
+
+  --color-border: #e5e5e5;
+  --color-border-light: #f5f5f5;
+  --color-border-dark: #d4d4d4;
+
+  --color-background: #f7f7f5;
+  --color-background-subtle: #eeeeec;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f5f5f5;
+  --color-background-dark: #0a0a0a;
+
+  --font-sans: 'Geist Sans', 'Inter', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+}
+
+:root {
+  --color-primary: #171717;
+  --color-secondary: #f5f5f5;
+  --color-text-primary: #171717;
+  --color-text-secondary: #525252;
+  --color-text-muted: #737373;
+  --color-border: #e5e5e5;
+  --color-background: #f7f7f5;
+  --color-background-subtle: #eeeeec;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #f5f5f5;
+    --color-secondary: #171717;
+    --color-text-primary: #f5f5f5;
+    --color-text-secondary: #a3a3a3;
+    --color-text-muted: #737373;
+    --color-border: #262626;
+    --color-background: #0a0a0a;
+    --color-background-subtle: #111111;
+    --color-surface: #141414;
+    --color-surface-secondary: #1a1a1a;
+  }
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  color: var(--color-text-primary);
+  background: var(--color-background);
+  color-scheme: light dark;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling with Lenis */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Utility classes */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Selection colors */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+/* Semantic utility classes for centralized color tokens */
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-background-subtle {
+  background-color: var(--color-background-subtle);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-surface-secondary {
+  background-color: var(--color-surface-secondary);
+}
+
+.border-border {
+  border-color: var(--color-border);
+}
+
+.border-border-light {
+  border-color: var(--color-border-light);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}

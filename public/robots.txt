@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yourportfolio.com/sitemap.xml
+
+# Disallow crawlers from accessing private areas
+Disallow: /_next/
+Disallow: /api/
+Disallow: /private/
