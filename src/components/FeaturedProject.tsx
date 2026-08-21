@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { getFeaturedProjects } from "@/data/projects";
 import { easeOut } from "framer-motion";
@@ -95,23 +96,19 @@ export default function FeaturedProject() {
           className="bg-surface dark:bg-surface rounded-3xl border border-border dark:border-border shadow-2xl overflow-hidden"
         >
           {/* Image Section with Reveal Effect */}
-          <div className="relative aspect-[16/10] lg:aspect-[21/9] overflow-hidden">
+          <div className="relative aspect-[2.5/1] lg:aspect-[2.5/1] overflow-hidden">
             <motion.div
               variants={imageReveal}
               initial="initial"
               animate="animate"
               className="absolute inset-0 bg-gradient-to-br from-background to-border dark:from-surface dark:to-surface-secondary"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <h3 className="text-6xl lg:text-8xl font-bold text-border dark:text-border mb-4">
-                  {primaryProject.name}
-                </h3>
-                <p className="text-2xl lg:text-3xl text-muted dark:text-muted max-w-2xl mx-auto">
-                  {primaryProject.description}
-                </p>
-              </div>
-            </div>
+            <Image
+              src={primaryProject.imageUrl}
+              alt={primaryProject.name}
+              fill className="object-contain"
+              priority
+            />
           </div>
 
           {/* Content Section */}
@@ -180,3 +177,9 @@ export default function FeaturedProject() {
     </section>
   );
 }
+
+
+
+
+
+

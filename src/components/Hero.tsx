@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, easeOut, Easing } from 'framer-motion';
+import Image from 'next/image';
 
 // Animation variants
 const containerVariants = {
@@ -89,22 +90,6 @@ export default function Hero() {
                 Contact me
               </motion.a>
             </div>
-
-            <div className="flex items-center gap-4 pt-8">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full border-2 border-surface dark:border-surface bg-background-subtle dark:bg-surface-secondary overflow-hidden"
-                  >
-                    <div className="w-full h-full bg-gradient-to-br from-background-subtle to-border dark:from-surface dark:to-border" />
-                  </div>
-                ))}
-              </div>
-              <div className="text-sm text-muted dark:text-muted">
-                Trusted by 50+ clients
-              </div>
-            </div>
           </motion.div>
         </div>
 
@@ -112,17 +97,16 @@ export default function Hero() {
         <div className="order-1 lg:order-2 flex justify-center">
           <motion.div
             variants={itemVariants}
-            className="relative w-full max-w-md aspect-[4/5] lg:aspect-[3/5]"
+            className="relative w-full max-w-md aspect-[2/3]"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-background-subtle to-border dark:from-surface dark:to-border rounded-3xl transform translate-x-4 translate-y-4" />
             <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-border dark:border-border">
-              <div className="w-full h-full bg-gradient-to-br from-background to-border-subtle dark:from-surface dark:to-surface-secondary flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto bg-border dark:bg-border rounded-full mb-4" />
-                  <div className="h-4 w-32 bg-border dark:bg-border mx-auto rounded" />
-                  <div className="h-3 w-48 bg-border dark:bg-border mx-auto rounded mt-2" />
-                </div>
-              </div>
+              <Image
+                src="/assets/my.jpg"
+                alt="Profile of Ahmad Rizky Febianto"
+                fill className="object-contain"
+                priority
+              />
             </div>
           </motion.div>
         </div>
@@ -130,3 +114,7 @@ export default function Hero() {
     </section>
   );
 }
+
+
+
+

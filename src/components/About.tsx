@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -76,17 +76,14 @@ const AboutContent = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-background-subtle to-border dark:from-surface dark:to-surface-secondary opacity-50" />
               
               {/* Profile Image Container */}
-              <div className="relative aspect-[4/5] lg:aspect-[4/6] overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-background-subtle to-border dark:from-surface dark:to-surface-secondary flex items-center justify-center">
-                  <div className="text-center px-8">
-                    <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-gray-700 to-gray-950 dark:from-border dark:to-border-light flex items-center justify-center mb-6 shadow-lg">
-                      <span className="text-6xl font-bold text-white dark:text-primary">A</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-primary dark:text-primary mb-2">Arief</h3>
-                    <p className="text-secondary dark:text-secondary">Fullstack Developer</p>
-                    <p className="text-muted dark:text-muted text-sm mt-1">Jakarta, Indonesia</p>
-                  </div>
-                </div>
+              <div className="relative aspect-[2/3] overflow-hidden">
+                <Image
+                  src="/assets/my.jpg"
+                  alt="Ahmad Rizky Febianto"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
               </div>
 
               {/* Hover overlay */}
@@ -117,18 +114,6 @@ const AboutContent = () => {
                   When I&apos;m not coding, I&apos;m exploring new technologies, contributing to open-source projects, or mentoring aspiring developers. I believe in continuous learning and sharing knowledge with the community.
                 </p>
               </div>
-
-              {/* Key Stats */}
-              <div className="grid grid-cols-2 gap-6 mt-10 pt-8 border-t border-border dark:border-border">
-                <div>
-                  <div className="text-4xl font-bold text-primary dark:text-primary mb-2">5+</div>
-                  <div className="text-sm text-muted dark:text-muted font-medium">Years Experience</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-primary dark:text-primary mb-2">50+</div>
-                  <div className="text-sm text-muted dark:text-muted font-medium">Projects Completed</div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </motion.div>
@@ -138,6 +123,10 @@ const AboutContent = () => {
 };
 
 export default AboutContent;
+
+
+
+
 
 
 

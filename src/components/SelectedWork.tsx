@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, easeOut } from 'framer-motion';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { getAllProjects } from '@/data/projects';
 
@@ -93,17 +94,13 @@ export default function SelectedWork() {
               {/* Project Card Panel */}
               <div className="bg-surface dark:bg-surface rounded-3xl border border-border dark:border-border shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                 {/* Image */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-background to-border dark:from-surface dark:to-surface-secondary">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/5">
+                <div className="relative aspect-[2.1/1] overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
                     <div className="bg-surface/90 dark:bg-surface-secondary/90 backdrop-blur-sm p-3 rounded-full">
                       <ArrowUpRight className="w-6 h-6 text-primary dark:text-primary" />
                     </div>
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-4xl font-bold text-border group-hover:text-border-light transition-colors duration-300">
-                      {project.name}
-                    </h3>
-                  </div>
+                  <Image src={project.imageUrl} alt={project.name} fill className="object-contain" priority />
                 </div>
 
                 {/* Content */}
@@ -167,3 +164,9 @@ export default function SelectedWork() {
     </section>
   );
 }
+
+
+
+
+
+

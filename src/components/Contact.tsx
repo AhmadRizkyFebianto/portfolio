@@ -40,40 +40,28 @@ const itemVariants = {
 
 const contactInfo = [
   {
-    label: 'Email',
-    value: 'hello@ariefdev.com',
-    icon: '?',
-    href: 'mailto:hello@ariefdev.com',
+    label: "Email",
+    value: "hello@ariefdev.com",
+    icon: "?",
+    href: "ahmadrizky13jkl@gmail.com",
   },
   {
-    label: 'Phone',
-    value: '+62 812-3456-7890',
-    icon: '??',
-    href: 'tel:+6281234567890',
+    label: "Location",
+    value: "Pasuruan, Indonesia",
+    icon: "??",
+    href: "#",
   },
   {
-    label: 'Location',
-    value: 'Jakarta, Indonesia',
-    icon: '??',
-    href: '#',
+    label: "LinkedIn",
+    value: "linkedin.com/in/ariefdev",
+    icon: "??",
+    href: "https://www.linkedin.com/in/ahmad-rizky-febianto-649406220/",
   },
   {
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/ariefdev',
-    icon: '??',
-    href: 'https://linkedin.com/in/ariefdev',
-  },
-  {
-    label: 'GitHub',
-    value: 'github.com/ariefdev',
-    icon: '??',
-    href: 'https://github.com/ariefdev',
-  },
-  {
-    label: 'Twitter',
-    value: '@ariefdev',
-    icon: '??',
-    href: 'https://twitter.com/ariefdev',
+    label: "GitHub",
+    value: "github.com/ariefdev",
+    icon: "??",
+    href: "https://github.com/AhmadRizkyFebianto",
   },
 ];
 

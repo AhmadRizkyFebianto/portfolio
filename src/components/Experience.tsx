@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Calendar, Briefcase, Code, Database, Layout } from 'lucide-react';
@@ -50,8 +50,8 @@ export default function Experience() {
   const experienceData = {
     company: 'PT INKA (Persero)',
     role: 'Fullstack Developer Intern',
-    period: 'June 2024 - Present',
-    description: 'Developing enterprise-level web applications for internal and external stakeholders.',
+    period: 'February 2024 – June 2024',
+    description: 'Developing enterprise-level web applications for HR management, payroll, and attendance systems. Built scalable solutions handling 5000+ employees while applying modern fullstack technologies.',
     achievements: [
       'Built scalable HR management systems handling 5000+ employees',
       'Developed RESTful APIs with Laravel following clean architecture principles',
@@ -91,14 +91,14 @@ export default function Experience() {
         <motion.div variants={itemVariants} className="mb-16">
           <div className="bg-white dark:bg-[#141414] rounded-3xl border border-border dark:border-border shadow-xl overflow-hidden">
             {/* Header */}
-            <div className="bg-primary dark:bg-primary p-8 lg:p-10 text-white">
+            <div className="bg-surface dark:bg-surface-secondary p-8 lg:p-10">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                 <div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-2">{experienceData.company}</h3>
-                  <p className="text-border-light text-lg">{experienceData.role}</p>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-2 text-primary dark:text-primary">{experienceData.company}</h3>
+                  <p className="text-primary dark:text-secondary text-lg">{experienceData.role}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-border-light">{experienceData.period}</p>
+                  <p className="text-primary dark:text-secondary">{experienceData.period}</p>
                 </div>
               </div>
             </div>
@@ -158,3 +158,5 @@ export default function Experience() {
     </section>
   );
 }
+
+
