@@ -91,14 +91,14 @@ export default function Experience() {
         <motion.div variants={itemVariants} className="mb-16">
           <div className="bg-white dark:bg-[#141414] rounded-3xl border border-border dark:border-border shadow-xl overflow-hidden">
             {/* Header */}
-            <div className="bg-surface dark:bg-surface-secondary p-8 lg:p-10">
+            <div className="bg-black dark:bg-white p-8 lg:p-10">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                 <div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-2 text-primary dark:text-primary">{experienceData.company}</h3>
-                  <p className="text-primary dark:text-secondary text-lg">{experienceData.role}</p>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-2 text-white dark:text-black">{experienceData.company}</h3>
+                  <p className="text-white/90 dark:text-black/90 text-lg">{experienceData.role}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-primary dark:text-secondary">{experienceData.period}</p>
+                  <p className="text-white/90 dark:text-black/90">{experienceData.period}</p>
                 </div>
               </div>
             </div>
