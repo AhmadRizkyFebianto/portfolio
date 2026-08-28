@@ -1,9 +1,10 @@
-'use client';
+"use client";
 
-import { motion, easeOut } from 'framer-motion';
-import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
-import { getAllProjects } from '@/data/projects';
+import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import { getAllProjects } from "@/data/projects";
+import Reveal from "@/components/Reveal";
 
 // Animation variants
 const containerVariants = {
@@ -56,32 +57,24 @@ const linkVariant = {
 export default function SelectedWork() {
   const allProjects = getAllProjects();
   // Filter out the primary featured project (SallAgri) for the grid
-  const gridProjects = allProjects.filter((p) => p.id !== 'sallagri');
+  const gridProjects = allProjects.filter((p) => p.id !== "sallagri");
 
   return (
     <section id="selected-work" className="py-24 lg:py-32 px-6 bg-background">
-      <motion.div
-        variants={containerVariants}
-        initial="initial"
-        animate="animate"
-        className="max-w-7xl mx-auto"
-      >
+      <Reveal className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <motion.div
-          variants={projectCardVariants}
-          className="mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary dark:text-primary mb-6">
-            Selected Work
-          </h2>
-          <div className="h-1 w-24 bg-primary dark:bg-primary rounded-full" />
-        </motion.div>
+        <Reveal direction="up" delay={0.1}>
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary dark:text-primary mb-6">
+              Selected Work
+            </h2>
+            <div className="h-1 w-24 bg-primary dark:bg-primary rounded-full" />
+          </div>
+        </Reveal>
 
         {/* Grid Layout - 2 columns */}
         <motion.div
           variants={staggerContainer}
-          initial="initial"
-          animate="animate"
           className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
         >
           {gridProjects.map((project) => (
@@ -89,7 +82,7 @@ export default function SelectedWork() {
               key={project.id}
               variants={projectCardVariants}
               className="group block cursor-pointer"
-              onClick={() => window.open(project.links.live, '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open(project.links.live, "_blank", "noopener,noreferrer")}
             >
               {/* Project Card Panel */}
               <div className="bg-surface dark:bg-surface rounded-3xl border border-border dark:border-border shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
@@ -137,6 +130,8 @@ export default function SelectedWork() {
                         target="_blank"
                         rel="noopener noreferrer"
                         variants={linkVariant}
+                        whileHover={{ x: 4 }}
+                        whileTap={{ scale: 0.98 }}
                         className="flex items-center text-sm font-medium text-primary dark:text-primary group/link"
                       >
                         Live Site
@@ -149,6 +144,7 @@ export default function SelectedWork() {
                          target="_blank"
                          rel="noopener noreferrer"
                          variants={linkVariant}
+                         whileHover={{ x: 4 }}
                          className="text-sm font-medium text-gray-500 dark:text-gray-500 hover:text-primary dark:text-primary transition-colors"
                        >
                          Code
@@ -160,13 +156,7 @@ export default function SelectedWork() {
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+      </Reveal>
     </section>
   );
 }
-
-
-
-
-
-

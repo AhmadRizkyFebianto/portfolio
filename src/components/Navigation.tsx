@@ -38,13 +38,25 @@ export default function Navigation() {
     },
   };
 
-  const linkVariants = {
-    initial: { opacity: 0, y: -20 },
+  const logoVariants = {
+    initial: { opacity: 0, y: -30 },
     animate: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.15,
+        duration: 0.3,
+        ease: easeOut,
+      },
+    },
+  };
+
+  const linkVariants = {
+    initial: { opacity: 0, x: -10 },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.2,
         staggerChildren: 0.05,
       },
     },
@@ -56,7 +68,7 @@ export default function Navigation() {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.15,
+        duration: 0.2,
         ease: easeOut,
       },
     },
@@ -85,21 +97,27 @@ export default function Navigation() {
           <motion.a
             href="#home"
             className="font-bold text-xl tracking-tight text-primary dark:text-primary"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            variants={logoVariants}
+            initial="initial"
+            animate="animate"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
           >
             Portfolio
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <motion.div
+            className="hidden md:flex items-center space-x-1"
+            variants={linkVariants}
+            initial="initial"
+            animate="animate"
+          >
             {NAV_LINKS.map((link) => (
               <motion.a
                 key={link.name}
                 href={link.href}
                 variants={linkItemVariants}
-                initial="initial"
-                animate="animate"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-4 py-2 rounded-lg text-sm font-medium text-secondary hover:text-primary dark:text-secondary dark:hover:text-primary transition-colors"
@@ -107,7 +125,7 @@ export default function Navigation() {
                 {link.name}
               </motion.a>
             ))}
-          </div>
+          </motion.div>
 
           {/* Mobile Menu Button */}
           <button
