@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourportfolio.com"),
+  metadataBase: new URL("https://ariz-portofolio.vercel.app"),
   title: {
     default: "Portfolio | Fullstack Developer",
     template: "%s | Portfolio",
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     description: "A premium portfolio showcasing technical expertise, projects, and experience in modern web development.",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Portfolio Preview",
+        url: "https://ariz-portofolio.vercel.app/logo.svg",
+        width: 64,
+        height: 64,
+        alt: "Portfolio Logo",
       },
     ],
   },
@@ -74,7 +74,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/logo.svg" />
         <link rel="manifest" href="/manifest.json" />
