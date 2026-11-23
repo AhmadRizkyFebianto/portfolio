@@ -23,7 +23,7 @@
   --color-surface-secondary: #f5f5f5;
   --color-background-dark: #0a0a0a;
 
-  --font-sans: 'Geist Sans', 'Inter', system-ui, sans-serif;
+  --font-sans: var(--font-geist-sans), 'Inter', system-ui, sans-serif;
   --font-mono: 'Geist Mono', monospace;
 }
 
@@ -62,6 +62,7 @@
 body {
   color: var(--color-text-primary);
   background: var(--color-background);
+  overflow-x: clip;
   color-scheme: light dark;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

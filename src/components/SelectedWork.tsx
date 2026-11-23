@@ -60,7 +60,7 @@ export default function SelectedWork() {
   const gridProjects = allProjects.filter((p) => p.id !== "sallagri");
 
   return (
-    <section id="selected-work" className="py-24 lg:py-32 px-6 bg-background">
+    <section id="work" className="py-24 lg:py-32 px-6 bg-background">
       <Reveal className="max-w-7xl mx-auto">
         {/* Section Header */}
         <Reveal direction="up" delay={0.1}>
@@ -75,17 +75,17 @@ export default function SelectedWork() {
         {/* Grid Layout - 2 columns */}
         <motion.div
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8"
         >
           {gridProjects.map((project) => (
             <motion.div
               key={project.id}
               variants={projectCardVariants}
-              className="group block cursor-pointer"
+              className="group flex h-full cursor-pointer"
               onClick={() => window.open(project.links.live, "_blank", "noopener,noreferrer")}
             >
               {/* Project Card Panel */}
-              <div className="bg-surface dark:bg-surface rounded-3xl border border-border dark:border-border shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-border dark:bg-surface">
                 {/* Image */}
                 <div className="relative aspect-[2.1/1] overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
@@ -97,7 +97,7 @@ export default function SelectedWork() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 lg:p-8">
+                <div className="flex flex-1 flex-col p-6 lg:p-8">
                   <h3 className="text-2xl font-bold tracking-tight text-primary dark:text-primary mb-3 group-hover:text-secondary dark:text-secondary transition-colors">
                     {project.name}
                   </h3>
@@ -123,7 +123,7 @@ export default function SelectedWork() {
                   </div>
 
                   {/* Links */}
-                  <div className="flex items-center gap-4">
+                  <div className="mt-auto flex items-center gap-4">
                     {project.links.live && (
                       <motion.a
                         href={project.links.live}

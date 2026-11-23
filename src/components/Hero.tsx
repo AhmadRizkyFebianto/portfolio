@@ -127,16 +127,14 @@ export default function Hero() {
                 Available for work
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary dark:text-primary">
-                Building digital
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary dark:text-primary">
+                Web apps for
                 <br />
-                <span className="text-secondary dark:text-secondary">experiences</span> that matter.
+                <span className="text-secondary dark:text-secondary">real work.</span>
               </h1>
 
               <p className="text-lg md:text-xl text-secondary dark:text-secondary max-w-xl leading-relaxed">
-                Fullstack developer specializing in modern web technologies.
-                Creating elegant solutions for complex problems with a focus on
-                performance, accessibility, and beautiful user interfaces.
+                I build responsive e-commerce, learning, and enterprise apps with Laravel, React, Next.js, and TypeScript—from user interface to API integration.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
@@ -198,16 +196,14 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            <motion.h1 variants={titleReveal} className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary dark:text-primary">
-              Building digital
+            <motion.h1 variants={titleReveal} className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary dark:text-primary">
+              Web apps for
               <br />
-              <span className="text-secondary dark:text-secondary">experiences</span> that matter.
+              <span className="text-secondary dark:text-secondary">real work.</span>
             </motion.h1>
 
             <motion.p variants={textReveal} className="text-lg md:text-xl text-secondary dark:text-secondary max-w-xl leading-relaxed">
-              Fullstack developer specializing in modern web technologies.
-              Creating elegant solutions for complex problems with a focus on
-              performance, accessibility, and beautiful user interfaces.
+              I build responsive e-commerce, learning, and enterprise apps with Laravel, React, Next.js, and TypeScript—from user interface to API integration.
             </motion.p>
 
             <motion.div variants={buttonReveal} className="flex flex-wrap gap-4 pt-4">

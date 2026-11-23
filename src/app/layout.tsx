@@ -1,17 +1,19 @@
 ﻿import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import SmoothScroll from "@/components/SmoothScroll";
 
-const geistSans = Geist({
+const geistSans = localFont({
+  src: [
+    { path: "../../node_modules/@fontsource/geist/files/geist-latin-400-normal.woff2", weight: "400" },
+    { path: "../../node_modules/@fontsource/geist/files/geist-latin-500-normal.woff2", weight: "500" },
+    { path: "../../node_modules/@fontsource/geist/files/geist-latin-600-normal.woff2", weight: "600" },
+    { path: "../../node_modules/@fontsource/geist/files/geist-latin-700-normal.woff2", weight: "700" },
+    { path: "../../node_modules/@fontsource/geist/files/geist-latin-800-normal.woff2", weight: "800" },
+  ],
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -71,7 +73,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+      className={`${geistSans.variable} h-full antialiased scroll-smooth`}
     >
       <head>
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />

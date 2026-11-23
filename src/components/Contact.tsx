@@ -36,15 +36,15 @@ const contactInfo = [
   },
   {
     label: "Location",
-    value: "Pasuruan, Indonesia",
+    value: "Pasuruan, East Java, Indonesia",
     icon: MapPin,
     href: "#",
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/ariefdev",
+    value: "linkedin.com/in/ahmad-rizky-febianto",
     icon: Globe,
-    href: "https://www.linkedin.com/in/ahmad-rizky-febianto-649406220/",
+    href: "https://www.linkedin.com/in/ahmad-rizky-febianto/",
   },
   {
     label: "GitHub",
@@ -54,7 +54,18 @@ const contactInfo = [
   },
 ];
 
-const socials = ["LinkedIn", "GitHub", "Twitter"];
+const socials = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ahmad-rizky-febianto/",
+    icon: Globe,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/AhmadRizkyFebianto",
+    icon: GitBranch,
+  },
+];
 
 export default function Contact() {
   return (
@@ -75,7 +86,7 @@ export default function Contact() {
         <Reveal direction="up" delay={0.2}>
           <motion.div variants={staggerContainer} initial="initial" animate="animate" className="bg-surface dark:bg-surface rounded-3xl border border-border dark:border-border shadow-2xl overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="bg-primary dark:bg-primary p-10 text-white">
+              <div className="bg-primary dark:bg-[#141414] p-10 text-white">
                 <h3 className="text-2xl font-bold mb-6">Get in touch</h3>
                 <p className="text-muted dark:text-muted mb-8 leading-relaxed">
                   I'm currently available for freelance work and full-time opportunities.
@@ -96,8 +107,8 @@ export default function Contact() {
                   <p className="text-sm font-medium text-white/70 mb-4">Follow me on social media</p>
                   <div className="flex gap-4">
                     {socials.map((social) => (
-                      <motion.a key={social} href={social === "LinkedIn" ? "https://www.linkedin.com/in/ahmad-rizky-febianto-649406220/" : social === "GitHub" ? "https://github.com/AhmadRizkyFebianto" : "#"} whileHover={{ y: -2 }} className="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-all">
-                        <span className="text-lg">{social === "LinkedIn" && <Globe className="w-5 h-5" />}{social === "GitHub" && <GitBranch className="w-5 h-5" />}{social === "Twitter" && <Mail className="w-5 h-5" />}</span>
+                      <motion.a key={social.label} href={social.href} aria-label={social.label} target="_blank" rel="noopener noreferrer" whileHover={{ y: -2 }} className="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-all">
+                        <social.icon className="w-5 h-5" aria-hidden="true" />
                       </motion.a>
                     ))}
                   </div>

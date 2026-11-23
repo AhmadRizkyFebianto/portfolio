@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Database, Layout, Server, Smartphone, Cpu, Layers, GitBranch } from "lucide-react";
+import { Code, Database, Layout, Server } from "lucide-react";
 import { easeOut } from "framer-motion";
 import Reveal from "@/components/Reveal";
 
@@ -41,34 +41,24 @@ const chipVariants = {
 
 const technologies = [
   {
-    category: "Backend Development",
+    category: "Frameworks",
     icon: Server,
-    items: ["Laravel", "PHP 8.x", "Node.js", "Express", "REST API", "GraphQL", "Microservices", "Redis", "RabbitMQ"],
+    items: ["Laravel", "Inertia.js", "React", "Next.js", "Flask", "Tailwind CSS", "Flutter", "React Native"],
   },
   {
-    category: "Database Management",
+    category: "Languages",
     icon: Database,
-    items: ["MySQL", "PostgreSQL", "SQLite", "MongoDB", "SQL Optimization", "Query Profiling", "Migrations"],
+    items: ["PHP", "JavaScript", "TypeScript", "SQL", "Python", "HTML", "CSS"],
   },
   {
-    category: "Frontend Development",
+    category: "Data & Integrations",
     icon: Layout,
-    items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Bootstrap", "jQuery"],
+    items: ["MySQL", "PostgreSQL", "REST APIs", "Midtrans payments"],
   },
   {
-    category: "Mobile Development",
-    icon: Smartphone,
-    items: ["React Native", "Android Development", "iOS Development", "Cross-platform"],
-  },
-  {
-    category: "DevOps & Tools",
+    category: "Tools & Practice",
     icon: Code,
-    items: ["Git", "Docker", "CI/CD", "Nginx", "Apache", "AWS", "Vercel", "Linux", "Terminal"],
-  },
-  {
-    category: "Enterprise Systems",
-    icon: Layers,
-    items: ["HR Systems", "Payroll", "Attendance", "Leave Management", "Performance Review", "ERP Integration"],
+    items: ["Git", "Figma", "Vite", "Responsive web design", "UI implementation"],
   },
 ];
 
@@ -90,7 +80,7 @@ export default function Technologies() {
             variants={staggerContainer}
             initial="initial"
             animate="animate"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
           >
             {technologies.map((tech) => {
               const Icon = tech.icon;
@@ -98,7 +88,7 @@ export default function Technologies() {
                 <motion.div
                   key={tech.category}
                   variants={categoryVariants}
-                  className="bg-surface dark:bg-surface rounded-3xl border border-border dark:border-border shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                  className="bg-surface dark:bg-surface rounded-2xl border border-border dark:border-border p-6 lg:p-8 hover:border-border-dark transition-colors duration-300"
                 >
                   <div className="flex items-center mb-6">
                     <div className="p-3 bg-background-subtle dark:bg-surface-secondary rounded-2xl mr-4">

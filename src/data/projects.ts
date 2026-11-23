@@ -21,17 +21,16 @@ export const projects: Project[] = [
     name: "SallAgri",
     slug: "sallagri",
     description:
-      "Enterprise agricultural marketplace connecting farmers with buyers across Indonesia",
+      "An English-learning platform created for agriculture students, with interactive lessons and progress tracking.",
     longDescription:
-      "SallAgri is a comprehensive enterprise-grade agricultural e-commerce platform designed to revolutionize the way farmers and buyers connect. Built with modern technologies, it provides a seamless experience for listing, discovering, and purchasing agricultural products at scale.",
+      "SallAgri is an English-learning platform for agriculture students. I built its responsive interface and more than ten interactive activities, including quizzes, word exercises, audio with transcripts, and text-to-speech practice, then connected learner progress to Laravel REST APIs.",
     imageUrl: "/assets/sallagri.png",
     technologies: [
-      "Next.js",
+      "React",
       "TypeScript",
-      "Laravel",
-      "PostgreSQL",
-      "Redis",
+      "Vite",
       "Tailwind CSS",
+      "Laravel REST API",
     ],
     links: {
       live: "https://sallagri.com",
@@ -44,9 +43,9 @@ export const projects: Project[] = [
     name: "NOC App",
     slug: "noc-app",
     description:
-      "Specialized bonding and certification system for agricultural products",
+      "A community health survey platform for gathering responses and supporting early risk detection.",
     longDescription:
-      "NOC App is a sophisticated bonding and certification platform that ensures quality and traceability for agricultural products throughout the supply chain. The system provides digital certification management and quality assurance workflows.",
+      "NOC is a community health survey platform designed to collect responses, surface useful insights, and encourage early risk detection.",
     imageUrl: "/assets/NOC.png",
     technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
     links: {
@@ -64,7 +63,7 @@ export const projects: Project[] = [
     longDescription:
       "A minimalist yet powerful portfolio website for Azwa Architecture, featuring immersive project displays, detailed case studies, and an elegant editorial design that showcases their award-winning work.",
     imageUrl: "/assets/azwa.png",
-    technologies: ["Next.js", "GSAP", "Three.js", "Framer Motion"],
+    technologies: ["Laravel", "Tailwind CSS", "REST API"],
     links: {
       live: "https://www.azwadesignstudio.com/",
     },
@@ -76,11 +75,11 @@ export const projects: Project[] = [
     name: "Bakoel Oli",
     slug: "bakoel-oli",
     description:
-      "Online marketplace for premium cooking oils and kitchen essentials",
+      "An automotive oil-service platform with home-visit technicians and service status tracking.",
     longDescription:
-      "Bakoel Oli is an e-commerce platform specializing in premium cooking oils and kitchen essentials. The platform features a curated product selection, subscription options, and educational content about healthy cooking.",
+      "I designed and built the responsive frontend for Bakoel Oli, an automotive oil-service platform. It includes a home-visit technician feature with service status tracking and uses REST APIs to display dynamic data.",
     imageUrl: "/assets/bakoel-oli.png",
-    technologies: ["Vue.js", "Stripe", "Tailwind CSS", "Firebase"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "REST API"],
     links: {
       live: "https://bakoel-oli.my.id/",
     },
